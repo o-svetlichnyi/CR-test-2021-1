@@ -18,6 +18,14 @@ const initContact = {
   phone: ''
 };
 
+const ContactsCount = ({ contacts = [] }: ContactsProps) => {
+  return (
+    <div className="awesome-contacts-count">
+      <span>{contacts.length}</span>
+    </div>
+  );
+};
+
 const Contacts = ({ contacts = [] }: ContactsProps) => {
   const [newContact, setNewContact] = useState<{ name: string; phone: string }>(initContact);
   const dispatch = useDispatch();
@@ -35,6 +43,7 @@ const Contacts = ({ contacts = [] }: ContactsProps) => {
 
   return (
     <div className="contact-wrapper">
+      <ContactsCount contacts={contacts} />
       <div className="contacts">
         {contacts.length &&
           contacts
