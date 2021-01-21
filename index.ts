@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { passContactsToClients, addNewContact, deleteContact } from '.actions';
+import { passContactsToClients, addNewContact, deleteContact } from './actions';
 
 interface Contact {
   id: number;
